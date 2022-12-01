@@ -9,6 +9,7 @@ class Queue:
         """Aqui irá sua implementação"""
 
     def dequeue(self):
+
         """Aqui irá sua implementação"""
 
     def search(self, index):
