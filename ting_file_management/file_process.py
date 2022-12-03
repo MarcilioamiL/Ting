@@ -1,10 +1,22 @@
+from ting_file_management.file_management import txt_importer
+import sys
+
+
 def process(path_file, instance):
-    """Aqui irá sua implementação"""
 
+    for path in range(len(instance)):
 
-def remove(instance):
-    """Aqui irá sua implementação"""
+        if instance.search(path)["nome_do_arquivo"] == path_file:
+            return 0
 
+    file = txt_importer(path_file)
+    dic = {
+            "nome_do_arquivo": path_file,
+            "qtd_linhas": len(file),
+            "linhas_do_arquivo": (file),
+        }
 
-def file_metadata(instance, position):
-    """Aqui irá sua implementação"""
+    instance.enqueue(dic)
+
+    sys.stdout.write(str(dic))
+    return dic
