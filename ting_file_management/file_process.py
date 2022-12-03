@@ -30,3 +30,11 @@ def remove(instance):
     file_path = instance.dequeue()["nome_do_arquivo"]
 
     sys.stdout.write(f"Arquivo {file_path} removido com sucesso\n")
+
+
+def file_metadata(instance, position):
+    try:
+        return sys.stdout.write(str(instance.search(position)))
+
+    except IndexError:
+        sys.stderr.write("Posição inválida")
