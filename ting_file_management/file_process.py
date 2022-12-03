@@ -20,3 +20,13 @@ def process(path_file, instance):
 
     sys.stdout.write(str(dic))
     return dic
+
+
+def remove(instance):
+
+    if not instance:
+        return sys.stdout.write("Não há elementos\n")
+
+    file_path = instance.dequeue()["nome_do_arquivo"]
+
+    sys.stdout.write(f"Arquivo {file_path} removido com sucesso\n")
